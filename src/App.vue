@@ -1,9 +1,7 @@
 <template>
-<h2>hello world</h2>
+  <router-view></router-view>
 </template>
 
-<script>
-</script>
+<script></script>
 
-<style>
-</style>
+<style></style>
