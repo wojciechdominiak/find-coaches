@@ -46,10 +46,10 @@ export default {
       return this.selectedCoach.hourlyRate;
     },
     description() {
-        return this.selectedCoach.description;
+      return this.selectedCoach.description;
     },
     contactLink() {
-      return this.$route.path + "/" + this.id + "/contact";
+      return this.$route.path + "/contact";
     },
   },
   created() {
