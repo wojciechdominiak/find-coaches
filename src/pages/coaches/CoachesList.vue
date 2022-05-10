@@ -3,7 +3,7 @@
   <section>
     <base-card>
       <div class="controls">
-        <base-button mode="outline">Refresh</base-button>
+        <base-button mode="outline" @click="loadCoaches">Refresh</base-button>
         <base-button v-if="!isCoach" link to="/register"
           >Register as a Coach</base-button
         >
@@ -38,6 +38,9 @@ export default {
       },
     };
   },
+  created() {
+    this.loadCoaches();
+  },
   computed: {
     isCoach() {
       return this.$store.getters["coaches/isCoach"];
@@ -62,6 +65,9 @@ export default {
     },
   },
   methods: {
+    loadCoaches() {
+      this.$store.dispatch("coaches/loadCoaches");
+    },
     setFilters(updatedFilters) {
       this.activeFilter = updatedFilters;
     },
