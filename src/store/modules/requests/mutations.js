@@ -3,6 +3,6 @@ export default {
     state.requests.push(payload);
   },
   setRequests(state, payload) {
-    state.reqyests = payload;
+    state.requests = payload;
   }
 };
