@@ -24,14 +24,18 @@ export default {
     context.commit("registerCoach", { ...coachData, id: userId });
   },
 
-  async loadCoaches(context) {
+  async loadCoaches(context, payload) {
+    if (!payload.forceRefresh && !context.getters.shouldUpdate) {
+      return;
+    }
+
     const response = await fetch(
       `https://vue-http-demo-e5d5c-default-rtdb.firebaseio.com/coaches.json`
     );
     const responseData = await response.json();
 
     if (!response.ok) {
-      const error = new Error(responseData.message || "Failed to fetch!")
+      const error = new Error(responseData.message || "Failed to fetch!");
       throw error;
     }
 
@@ -49,5 +53,6 @@ export default {
       coaches.push(coach);
     }
     context.commit("setCoaches", coaches);
+    context.commit("setFetchTimestamp");
   },
 };
