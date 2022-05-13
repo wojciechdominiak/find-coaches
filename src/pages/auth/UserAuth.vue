@@ -1,12 +1,12 @@
 <template>
-  <base-dialog :show="!!error" title="An error ocurred" @close="handleError">
-    <p>{{ error }}</p>
-  </base-dialog>
-  <base-dialog :show="isLoading" title="Authenticating..." fixed>
-    <p>Autheniticating</p>
-    <base-spinner></base-spinner>
-  </base-dialog>
   <div>
+    <base-dialog :show="!!error" title="An error ocurred" @close="handleError">
+      <p>{{ error }}</p>
+    </base-dialog>
+    <base-dialog :show="isLoading" title="Authenticating..." fixed>
+      <p>Autheniticating</p>
+      <base-spinner></base-spinner>
+    </base-dialog>
     <base-card>
       <form @submit.prevent="submitForm">
         <div class="form-control">
@@ -73,7 +73,10 @@ export default {
 
       try {
         if (this.mode === "login") {
-          //...
+          await this.$store.dispatch("login", {
+            email: this.email,
+            password: this.password,
+          });
         } else {
           await this.$store.dispatch("signup", {
             email: this.email,
