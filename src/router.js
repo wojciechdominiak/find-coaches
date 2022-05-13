@@ -13,10 +13,11 @@ import store from "./store/index.js";
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: "/", redirect: "/coaches" },
-    { path: "/coaches", component: CoachesList },
+    { path: "/" , redirect: "/find-coaches/coaches", },
+    { path: "/find-coaches/" , redirect: "/find-coaches/coaches" },
+    { path: "/find-coaches/coaches", component: CoachesList },
     {
-      path: "/coaches/:id",
+      path: "/find-coaches/coaches/:id",
       component: CoachDetail,
       props: true,
       children: [
@@ -24,25 +25,25 @@ const router = createRouter({
       ],
     },
     {
-      path: "/register",
+      path: "/find-coaches/register",
       component: CoachRegistration,
       meta: { requiresAuth: true },
     },
     {
-      path: "/requests",
+      path: "/find-coaches/requests",
       component: RequestsReceived,
       meta: { requiresAuth: true },
     },
-    { path: "/auth", component: UserAuth, meta: { requiresUnAuth: true } },
-    { path: "/:notFound(.*)", component: NotFound },
+    { path: "/find-coaches/auth", component: UserAuth, meta: { requiresUnAuth: true } },
+    { path: "/find-coaches/:notFound(.*)", component: NotFound },
   ],
 });
 
 router.beforeEach(function (to, from, next) {
   if (to.meta.requiresAuth && !store.getters.isAuthenticated) {
-    next("/auth");
+    next("/find-coaches/auth");
   } else if (to.meta.requiresUnAuth && store.getters.isAuthenticated) {
-    next("/coaches");
+    next("/find-coaches/coaches");
   } else {
     next();
   }

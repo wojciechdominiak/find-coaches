@@ -20,7 +20,7 @@ export default {
   methods: {
     saveData(data) {
       this.$store.dispatch("coaches/registerCoach", data);
-      this.$router.replace("/coaches");
+      this.$router.replace("/find-coaches/coaches");
     },
   },
 };

@@ -1,13 +1,13 @@
 <template>
   <header>
     <nav>
-      <h1><router-link to="/">Find a Coach</router-link></h1>
+      <h1><router-link to="/find-coaches">Find a Coach</router-link></h1>
       <ul>
-        <li><router-link to="/coaches">All coaches</router-link></li>
+        <li><router-link to="/find-coaches/coaches">All coaches</router-link></li>
         <li v-if="isLoggedIn">
-          <router-link to="/requests">Requestes</router-link>
+          <router-link to="/find-coaches/requests">Requestes</router-link>
         </li>
-        <li v-else><router-link to="/auth">Login</router-link></li>
+        <li v-else><router-link to="/find-coaches/auth">Login</router-link></li>
         <li>
           <base-button @click="logout" v-if="isLoggedIn">Logout</base-button>
         </li>
@@ -28,7 +28,7 @@ export default {
   methods: {
     logout() {
       this.$store.dispatch("logout");
-      this.$router.replace('/coaches');
+      this.$router.replace('/find-coaches/coaches');
     },
   },
 };
