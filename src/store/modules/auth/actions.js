@@ -16,7 +16,9 @@ export default {
 
     if (!response.ok) {
       console.log(responseData);
-      const error = new Error(responseData.message || "Failed to authenticate. Check your login data.");
+      const error = new Error(
+        responseData.message || "Failed to authenticate. Check your login data."
+      );
       throw error;
     }
     console.log(responseData);
@@ -43,7 +45,9 @@ export default {
 
     if (!response.ok) {
       console.log(responseData);
-      const error = new Error(responseData.message || "Failed to authenticate. Check your login data.");
+      const error = new Error(
+        responseData.message || "Failed to authenticate. Check your login data."
+      );
       throw error;
     }
     console.log(responseData);
@@ -51,6 +55,13 @@ export default {
       token: responseData.idToken,
       userId: responseData.localId,
       tokenExpiration: responseData.expiresIn,
+    });
+  },
+  logout(context) {
+    context.commit("setUser", {
+      token: null,
+      userId: null,
+      tokenExpiration: null,
     });
   },
 };
