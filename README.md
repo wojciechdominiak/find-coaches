@@ -1,24 +1,6 @@
-# find-coaches
+Find a Coach - a simple browser app.
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Live demo: https://wojciechdominiak.github.io/find-coaches/
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Stack: HTML5, CSS3, JavaScript, Vue.js 3.0 (Vue CLI, Vuex 4.0, Vue Router)
