@@ -1,13 +1,17 @@
 <template>
   <header>
     <nav>
-      <h1><router-link to="/find-coaches">Find a Coach</router-link></h1>
+      <h1>
+        <router-link to="/find-coaches">Find a <span>Coach</span></router-link>
+      </h1>
       <ul>
-        <li><router-link to="/find-coaches/coaches">All coaches</router-link></li>
-        <li v-if="isLoggedIn">
-          <router-link to="/find-coaches/requests">Requestes</router-link>
+        <li>
+          <router-link class="link" to="/find-coaches/coaches">All coaches</router-link>
         </li>
-        <li v-else><router-link to="/find-coaches/auth">Login</router-link></li>
+        <li v-if="isLoggedIn">
+          <router-link class="link" to="/find-coaches/requests">Requestes</router-link>
+        </li>
+        <li v-else><router-link class="link" to="/find-coaches/auth">Login</router-link></li>
         <li>
           <base-button @click="logout" v-if="isLoggedIn">Logout</base-button>
         </li>
@@ -28,7 +32,7 @@ export default {
   methods: {
     logout() {
       this.$store.dispatch("logout");
-      this.$router.replace('/find-coaches/coaches');
+      this.$router.replace("/find-coaches/coaches");
     },
   },
 };
@@ -37,40 +41,47 @@ export default {
 <style scoped>
 header {
   width: 100%;
-  height: 5rem;
+  height: 6rem;
   background-color: #3d008d;
+  box-shadow: 0 1px 4px #3d008d;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 header a {
+  font-weight: bold;
   text-decoration: none;
-  color: #f391e3;
+  color: rgb(255, 252, 252);
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.25rem;
   border: 1px solid transparent;
 }
 
-a:active,
-a:hover,
-a.router-link-active {
-  border: 1px solid #f391e3;
-}
-
-h1 {
-  margin: 0;
+.link:active,
+.link:hover,
+.link.router-link-active {
+  border-radius: 1.5rem;
+  background-color: rgb(255, 252, 252);
+  color: #3d008d;
 }
 
 h1 a {
+  background-color: #3d008d;
   color: white;
   margin: 0;
+  font-size: 1.7rem;
 }
 
-h1 a:hover,
 h1 a:active,
+h1 a:hover,
 h1 a.router-link-active {
-  border-color: transparent;
+  background-color: #3d008d;
+  color: rgb(255, 252, 252);
+}
+
+span {
+  color: rgb(65, 142, 155);
 }
 
 header nav {

@@ -38,9 +38,9 @@ export default {
 
 <style scoped>
 li {
+  background-color: rgb(249, 244, 249);
   margin: 1rem 0;
-  border: 1px solid #424242;
-  border-radius: 12px;
+  border-radius: 1rem;
   padding: 1rem;
 }
 

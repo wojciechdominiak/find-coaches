@@ -45,11 +45,12 @@ export default {
 
 <style scoped>
 h2 {
-  margin: 0.5rem 0;
+  margin: .5rem 0 1.5rem 0;
 }
 
 .filter-option {
   margin-right: 1rem;
+  font-size: 1.2rem;
 }
 
 .filter-option label,
