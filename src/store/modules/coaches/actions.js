@@ -49,7 +49,7 @@ export default {
         id: key,
         firstName: responseData[key].firstName,
         lastName: responseData[key].lastName,
-        description: responseData[key].descripition,
+        description: responseData[key].description,
         hourlyRate: responseData[key].hourlyRate,
         areas: responseData[key].areas,
       };
