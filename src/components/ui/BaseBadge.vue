@@ -15,8 +15,6 @@ export default {
 
 <style scoped>
 .badge {
-  background-color: #ccc;
-  color: #252525;
   border-radius: 40px;
   padding: 0.5rem 1.2rem;
   display: inline-block;

@@ -20,12 +20,13 @@ export default {
 
 <style scoped>
 li {
-  margin: 1rem 0;
+  margin: 2rem 0;
   border: 1px solid #ccc;
-  padding: 1rem;
+  padding: 1.3rem;
 }
 
 a {
+  font-size: 1.3rem;
   color: #3d008d;
   text-decoration: none;
   font-weight: bold;
@@ -38,5 +39,7 @@ a:active {
 
 p {
   margin: 0.5rem 0 0 0;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 </style>

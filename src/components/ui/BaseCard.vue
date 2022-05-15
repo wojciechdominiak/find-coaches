@@ -10,7 +10,7 @@
   box-shadow: 0 2px 8px rgba(243, 233, 251);
   padding: 2rem;
   margin: 3rem auto;
-  max-width: 50rem;
+  max-width: 40rem;
   background-color: rgb(243, 233, 251);
 }
 </style>

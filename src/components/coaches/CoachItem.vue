@@ -39,7 +39,7 @@ export default {
 <style scoped>
 li {
   background-color: rgb(249, 244, 249);
-  margin: 1rem 0;
+  margin: 2rem 0;
   border-radius: 1rem;
   padding: 1rem;
 }
@@ -60,5 +60,9 @@ div {
 .actions {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
+}
+a {
+ margin-top: 1rem;
 }
 </style>
