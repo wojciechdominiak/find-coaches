@@ -132,6 +132,7 @@ header ul {
   color: rgb(255, 252, 252);
   background-color: #3d008d;
   width: 100%;
+  transition: all .5s;
 }
 
 .inactive {

@@ -19,6 +19,7 @@
     </section>
     <section>
       <base-card>
+      <h2>Description</h2>
         <base-badge
           v-for="area in areas"
           :key="area"
