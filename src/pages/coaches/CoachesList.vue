@@ -120,5 +120,9 @@ ul {
 .controls {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+button, a {
+  margin: 1rem;
 }
 </style>

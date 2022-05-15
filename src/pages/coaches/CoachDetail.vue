@@ -10,7 +10,9 @@
       <base-card>
         <header>
           <h2>Interested? Reach out now!</h2>
-          <base-button link :to="contactLink">Contact</base-button>
+          <base-button v-if="activeButton" @click="disactiveButton" link :to="contactLink"
+            >Contact</base-button
+          >
         </header>
         <router-view> </router-view>
       </base-card>
@@ -35,6 +37,7 @@ export default {
   data() {
     return {
       selectedCoach: null,
+      activeButton: true,
     };
   },
   computed: {
@@ -58,7 +61,12 @@ export default {
     this.selectedCoach = this.$store.getters["coaches/coaches"].find(
       (coach) => coach.id === this.id
     );
-    
+    this.activeButton= true;
+  },
+  methods: {
+    disactiveButton() {
+      this.activeButton = false;
+    },
   },
 };
 </script>

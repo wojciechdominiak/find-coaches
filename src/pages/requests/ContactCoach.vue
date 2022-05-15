@@ -30,12 +30,9 @@ export default {
   },
   methods: {
     submitForm() {
+      const regexEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
       this.formIsValid = true;
-      if (
-        this.email === "" ||
-        !this.email.includes("@") ||
-        this.message === ""
-      ) {
+      if (!regexEmail.test(this.email) || this.message.length < 1) {
         this.formIsValid = false;
         return;
       }
