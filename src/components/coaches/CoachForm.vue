@@ -8,7 +8,7 @@
         v-model.trim="firstName.val"
         @blur="clearValidity('firstName')"
       />
-      <p v-if="!firstName.isValid">First name must not be empty</p>
+      <p v-if="!firstName.isValid">Enter correct First name</p>
     </div>
     <div class="form-control" :class="{ invalid: !lastName.isValid }">
       <label for="lastname">Last name</label>
@@ -18,7 +18,7 @@
         v-model.trim="lastName.val"
         @blur="clearValidity('lastName')"
       />
-      <p v-if="!lastName.isValid">Last name must not be empty</p>
+      <p v-if="!lastName.isValid">Enter correct Last name</p>
     </div>
     <div class="form-control" :class="{ invalid: !description.isValid }">
       <label for="description">Description</label>
@@ -73,7 +73,7 @@
         <label for="career">Career Advisory</label>
       </div>
     </div>
-    <p v-if="!areas.isValid">At least one expertise must be selected</p>
+    <p v-if="!areas.isValid">At least one expertise must be selected.</p>
     <p v-if="!formIsValid">Please fix the above errors and submit again.</p>
     <base-button>Register</base-button>
   </form>
@@ -113,11 +113,13 @@ export default {
     },
     validateForm() {
       this.formIsValid = true;
-      if (this.firstName.val === "") {
+      const regexName = /^[a-zA-Z ]{2,30}$/;
+
+      if (!regexName.test(this.firstName.val)) {
         this.firstName.isValid = false;
         this.formIsValid = false;
       }
-      if (this.lastName.val === "") {
+      if (!regexName.test(this.lastName.val)) {
         this.lastName.isValid = false;
         this.formIsValid = false;
       }
@@ -153,6 +155,9 @@ export default {
 </script>
 
 <style scoped>
+button {
+  margin: 1rem 0 0 0;
+}
 .form-control {
   margin: 0.5rem 0;
 }
@@ -195,7 +200,7 @@ input[type="checkbox"]:focus {
 }
 
 h3 {
-  margin: 0.5rem 0;
+  margin: 1rem 0 .5rem 0;
   font-size: 1rem;
 }
 

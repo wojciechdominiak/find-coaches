@@ -1,18 +1,20 @@
 <template>
   <base-card>
     <h2>Find your Coach</h2>
-    <span class="filter-option">
-      <input type="checkbox" id="frontend" checked @change="setFilter" />
-      <label for="frontend">Frontend</label>
-    </span>
-    <span class="filter-option">
-      <input type="checkbox" id="backend" checked @change="setFilter" />
-      <label for="backend">Backend</label>
-    </span>
-    <span class="filter-option">
-      <input type="checkbox" id="career" checked @change="setFilter" />
-      <label for="career">Career</label>
-    </span>
+    <div class="container">
+      <span class="filter-option">
+        <input type="checkbox" id="frontend" checked @change="setFilter" />
+        <label for="frontend">Frontend</label>
+      </span>
+      <span class="filter-option">
+        <input type="checkbox" id="backend" checked @change="setFilter" />
+        <label for="backend">Backend</label>
+      </span>
+      <span class="filter-option">
+        <input type="checkbox" id="career" checked @change="setFilter" />
+        <label for="career">Career</label>
+      </span>
+    </div>
   </base-card>
 </template>
 
@@ -45,11 +47,18 @@ export default {
 
 <style scoped>
 h2 {
-  margin: .5rem 0 1.5rem 0;
+  margin: 0.5rem 0 .5rem 0;
+}
+.container {
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .filter-option {
   margin-right: 1rem;
+  margin-top: 1rem;
   font-size: 1.2rem;
 }
 
