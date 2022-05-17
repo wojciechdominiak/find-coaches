@@ -1,6 +1,6 @@
 # Find a Coach
 
-Simple browser app where users can find a coach. Users can signup and login. To make an announcement, users have to register as a coach. Also users can send a request to the coach. Coach will see requests in the inbox.
+Simple browser app where the user can find a coach. The user can signup and login. To make an announcement, the user has to register as a coach. Also users can send a request to the coach. Coach will see requests in the inbox. 
 
 ## Live demo
 
