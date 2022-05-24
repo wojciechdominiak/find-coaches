@@ -1,7 +1,9 @@
 <template>
   <li>
-    <h3>{{ fullName }}</h3>
-    <h4>${{ rate }}/hour</h4>
+    <div class="container">
+      <h3>{{ fullName }}</h3>
+      <h4>${{ rate }}/hour</h4>
+    </div>
     <div>
       <base-badge
         v-for="area in areas"
@@ -32,19 +34,23 @@ export default {
 
 <style scoped>
 li {
-  background-color: rgb(249, 244, 249);
+  background-color: rgb(255, 255, 252);
+  box-shadow: 0 1px 4px rgba(243, 233, 251);
   margin: 2rem 0;
   border-radius: 1rem;
   padding: 1rem;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 h3 {
   font-size: 1.5rem;
 }
-
-h3,
-h4 {
-  margin: 0.5rem 0;
+h4{
+  font-size: 1.25rem;
 }
 
 div {
@@ -57,6 +63,6 @@ div {
   flex-wrap: wrap;
 }
 a {
- margin-top: 1rem;
+  margin-top: 1rem;
 }
 </style>

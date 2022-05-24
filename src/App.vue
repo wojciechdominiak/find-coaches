@@ -44,7 +44,7 @@ html {
 
 body {
   margin: 0;
-  background-color: rgb(255, 252, 252);
+  background-color: rgb(250, 252, 251);
 }
 
 .route-enter-from {
