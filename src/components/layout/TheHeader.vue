@@ -123,7 +123,7 @@ header ul {
   top: 5rem;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
   left: 0;
   list-style: none;
@@ -140,7 +140,8 @@ header ul {
 }
 
 li {
-  margin: 0 .5rem;
+  margin: 0rem;
+  padding: .5rem;
 }
 
 .link {
@@ -172,6 +173,9 @@ li {
   }
   .nav-header__toggle {
     display: none;
+  }
+  li {
+    padding:0;
   }
 }
 </style>

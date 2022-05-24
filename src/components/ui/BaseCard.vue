@@ -11,6 +11,6 @@
   padding: 2rem;
   margin: 3rem auto;
   max-width: 40rem;
-  background-color: rgb(243, 233, 251);
+  background-color: rgb(255, 255, 252);
 }
 </style>
