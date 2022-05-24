@@ -80,15 +80,16 @@ export default {
 <style scoped>
 header {
   width: 100%;
-  height: 5rem;
-  background-color: #3d008d;
-  box-shadow: 0 1px 4px #3d008d;
+  background-color: rgb(250, 252, 251);
+  color: black;
   display: grid;
   place-items: center;
+    box-shadow: 0 2px 8px rgba(243, 233, 251);
 }
 
 header nav {
-  width: 80%;
+  padding: .5rem;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -96,18 +97,18 @@ header nav {
 
 h1 a {
   text-decoration: none;
-  color: white;
+  color: black;
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 span {
-  color: rgb(65, 142, 155);
+  color: #3d008d;
 }
 
 .nav-header__toggle {
-  font-size: 1.5rem;
-  color: white;
+  font-size: 2rem;
+  color: black;
   background: transparent;
   border-color: transparent;
   transition: 0.3s;
@@ -115,7 +116,7 @@ span {
 }
 
 .nav-header__toggle:hover {
-  color: rgb(65, 142, 155);
+  color: #3d008d
 }
 
 header ul {
@@ -130,7 +131,7 @@ header ul {
   margin: 0;
   padding:0;
   color: rgb(255, 252, 252);
-  background-color: #3d008d;
+  background-color: rgb(250, 252, 251);
   width: 100%;
   transition: all .5s;
 }
@@ -148,8 +149,7 @@ li {
   font-weight: bold;
   font-size: 1.2rem;
   text-decoration: none;
-  color: rgb(255, 252, 252);
-  background-color: #3d008d;
+  color: black;
   display: inline-block;
   padding: 0.75rem 1.25rem;
 }
@@ -157,11 +157,14 @@ li {
 .link:active,
 .link:hover,
 .link.router-link-active {
-  color: rgb(65, 142, 155);
-  background-color: #3d008d;
+  color: #3d008d;
+  background-color: rgb(250, 252, 251);;
 }
 
 @media screen and (min-width: 768px) {
+  header nav {
+    width: 70%;
+  }
   .inactive,
   header ul {
     position: static;
