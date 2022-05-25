@@ -35,7 +35,7 @@ export default {
 <style scoped>
 li {
   background-color: rgb(255, 255, 252);
-  box-shadow: 0 1px 4px rgba(243, 233, 251);
+  box-shadow: 0 1px 4px rgb(235, 222, 245);
   margin: 2rem 0;
   border-radius: 1rem;
   padding: 1rem;
@@ -44,6 +44,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 h3 {

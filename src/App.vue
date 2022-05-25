@@ -40,6 +40,7 @@ export default {
 
 html {
   font-family: "Roboto", sans-serif;
+  font-size: 13px;
 }
 
 body {
@@ -65,5 +66,10 @@ body {
 .route-leave-from {
   opacity: 1;
   transform: translateY(0);
+}
+@media screen and (min-width: 768px) {
+html {
+  font-size:15px;
+}
 }
 </style>

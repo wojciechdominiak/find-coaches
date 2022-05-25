@@ -15,7 +15,7 @@ export default {
 
 <style scoped>
 .badge {
-  border-radius: 40px;
+  border-radius: 8px;
   padding: 0.5rem 1.2rem;
   display: inline-block;
   margin: .4rem;
